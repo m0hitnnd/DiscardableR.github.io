@@ -2,7 +2,7 @@
 layout: post
 title:  "Signed Unsigned with Shuri & Scott"
 date:   2020-12-12 23:23:19 +0530
-categories: jekyll update
+categories: blog
 ---
 
 ***Scott*** - Heyy *Shuri*!!  
