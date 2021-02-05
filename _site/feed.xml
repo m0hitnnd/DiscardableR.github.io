@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+    <link>
+    http://localhost:4000</link>
+    
+      
+      <item>
+        <title>Signed &amp; Unsigned with Shuri &amp; Scott</title>
+        
+          <description>&lt;p&gt;A conversation between two friends about Signed &amp;amp; UnSigned Data Types.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Scott&lt;/em&gt;&lt;/b&gt; - Heyy...I was solving one question and it stated - &quot;Given an unsigned Int...&quot;, and now I am slightly confused. What is unsigned data type and how it's different from basic data type like Int?&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Shuri&lt;/em&gt;&lt;/b&gt; - Okay, In short, Signed Data Types will store both negative and positive values, whereas Unsigned Data Types will store only positive values.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Shuri&lt;/em&gt;&lt;/b&gt; - To know how they differs in terms of range, lets start with a Bit.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Scott&lt;/em&gt;&lt;/b&gt; - Okay, great.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Shuri&lt;/em&gt;&lt;/b&gt; - A bit can store either value 0 or 1. That means 2 possible values.&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;Bit1&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;2 bits can store 2 values(0 or 1) for each bit, that means we can represent or store 4 possible values with 2 bits.&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;Bit1&lt;/th&gt;
+&lt;th&gt;Bit2&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;      &lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Scott&lt;/em&gt;&lt;/b&gt; - Okay, that means with Int2, we can represent 0, 1, 2 &amp;amp; 3. So, then the range  for Int2 will be [0, 3], right?&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Shuri&lt;/em&gt;&lt;/b&gt; - Umm...wrong. The range for Unsigned Int2 would be [0, 3],  not for a signed Int2.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Shuri&lt;/em&gt;&lt;/b&gt; - Signed Int will have both negative and positive values.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Scott&lt;/em&gt;&lt;/b&gt; - Okay..but how do we represent a negative value in bit? You can only represent 0 or 1 in a bit right? You can't put a -ve or +ve sign.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Shuri&lt;/em&gt;&lt;/b&gt; - Correct, you can't put -ve or +ve sign. But, there are ways to represent a negative value.&lt;/p&gt;
+&lt;p&gt;One way is to, invert the digits and add 1 to it. The resultant would represent its negative value.
+Lets take 01 which represents 1.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+01 -&amp;gt; invert digits  -&amp;gt; 10 -&amp;gt; add 1 -&amp;gt; 11  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, 11 represents -1.&lt;br /&gt;
+Btw, the above approach of inverting the digits and adding 1 to it is called 2’s complement.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Scott&lt;/em&gt;&lt;/b&gt; - So, 11 which we used to represent 3 for unsigned Int2, can now now be used to represent -1 for signed Int2 right?&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Shuri&lt;/em&gt;&lt;/b&gt; - That's correct.  And, 1 0 can be used to represent -2, since `2's complement` of 1 0 is 1 0.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;&lt;em&gt;Shuri&lt;/em&gt;&lt;/b&gt; - This way with the same number of bits we can be used to represent both positive and negative values.
+          Signed Int2 will have these values:&lt;/p&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;th&gt;Bit1&lt;/th&gt;
+&lt;th&gt;Bit2&lt;/th&gt;
+&lt;th&gt;Value&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;-2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;-1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;      &lt;/p&gt;
+</description>
+        
+        <pubDate>Sat, 01 Feb 2020 15:48:00 +0530</pubDate>
+        <link>
+        http://localhost:4000/mohitnnd/2020/02/01/signed_and_unsigned.html</link>
+        <guid isPermaLink="true">http://localhost:4000/mohitnnd/2020/02/01/signed_and_unsigned.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>A Full and Comprehensive Style Test</title>
+        
+          <description>&lt;p&gt;This is just an &lt;em&gt;ipsis verbis&lt;/em&gt; copy of the first example running on the &lt;a href=&quot;http://demo.ghost.io&quot;&gt;Ghost Demo&lt;/a&gt;. This shows how you can use html styling to achieve your hopes.&lt;/p&gt;</description>
+        
+        <pubDate>Sat, 27 Sep 2014 15:48:00 +0530</pubDate>
+        <link>
+        http://localhost:4000/casper/2014/09/27/a-full-and-comprehensive-style-test.html</link>
+        <guid isPermaLink="true">http://localhost:4000/casper/2014/09/27/a-full-and-comprehensive-style-test.html</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
