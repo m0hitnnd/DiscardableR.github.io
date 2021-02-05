@@ -1,13 +1,0 @@
-I"<p><em>Scott</em> - Heyy <em>Shuri</em>!!<br />
-<em>Shuri</em> - Heyy <em>Scott</em>!!<br />
-<em>Scott</em> - Need your help to understand about data types and their range.<br />
-<em>Shuri</em> - You mean…Integer, Float, Double, etc ?<br />
-<em>Scott</em> - Yes Yes.<br />
-<em>Scott</em> - I am very confused. There’s signed data type, unsigned data type, Int32, Float32,  Int64, double….<br />
-<em>Shuri</em> - Okay Okay Okay…got it. Let’s take Integer data type to understand this.<br />
-<em>Scott</em> - Perfect!<br />
-<em>Shuri</em> - So, Integer can be of 8 bits which is represented by Int8, 16 bits represented by Int16, 32 bits represented by Int32 and so on…<br />
-<em>Shuri</em> - A bit can store either value 0 or 1. That means 2 possible values.<br />
-                                              0      or    1  
-                 2 bits can store 2 values(0 or 1) for each bit, that means we can represent or store 22 possible values with 2                  bits.</p>
-:ET
