@@ -2,10 +2,10 @@
 layout: post
 cover: 'assets/images/cover7.jpg'
 navigation: True
-title: Signed & Unsigned with Shuri & Scott
+title: Signed & Unsigned
 date: 2020-02-01 10:18:00
-tags: Tech Shuri&Scott
-subclass: 'post tag-tech tag-shuri&scott'
+tags: tech conversational
+subclass: 'post tag-tech tag-conversational'
 logo: 'assets/images/ghost.png'
 author: mohitnnd
 categories: mohitnnd

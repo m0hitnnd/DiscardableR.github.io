@@ -4,7 +4,7 @@ cover: 'assets/images/cover7.jpg'
 navigation: True
 title: Custom Ternary Operator in Swift
 date: 2020-03-08 09:30:00
-tags: Tech Swift
+tags: tech swift
 subclass: 'post tag-swift tag-tech'
 logo: 'assets/images/ghost.png'
 author: mohitnnd
