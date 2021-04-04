@@ -98,6 +98,7 @@ class: 'post-template'
                             <span class="hidden">Google+</span>
                         </a>
                     </section>
+                    <script data-name="BMC-Widget" data-cfasync="true" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="{{author[1].bmc_id}}" data-description="Support {{author[1].name}} on Buy me a coffee!" data-message="" data-color="#ff813f" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
                 {% endif %}
             {% endfor %}
 
@@ -105,12 +106,11 @@ class: 'post-template'
             {% if page.disqus %}
                 {% include disqus.html %}
             {% endif %}
-
         </footer>
-
     </article>
 
 </main>
+
 
 <aside class="read-next">
 
